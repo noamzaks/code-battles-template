@@ -1,11 +1,14 @@
 <p align="center">
-  <img src="https://github.com/noamzaks/code-battles/assets/63877260/7f1708b0-0dda-481e-aaf8-5f950ab47616" height="140">
+  <img src="https://github.com/noamzaks/code-battles/assets/63877260/b330aa14-7003-4204-8907-e77a5c6e8d81" height="140">
 </p>
 <h1 align="center">
   Code Battles
   <br />
   <img src="https://img.shields.io/badge/version-1.0.0-purple.svg">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <a href='https://code-battles.readthedocs.io/en/latest/?badge=latest'>
+      <img src='https://readthedocs.org/projects/code-battles/badge/?version=latest' alt='Documentation Status' />
+  </a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
 </h1>
 
@@ -17,6 +20,7 @@
     &nbsp;&middot&nbsp;
     🚗 <a href="#roadmap">Roadmap</a>
 </p>
+
 
 # Getting Started
 
