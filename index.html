@@ -28,6 +28,11 @@
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body style="height: 100vh; touch-action: none" class="line-numbers">
+    <script>
+      // This disables PyScript info logging
+      console.info = () => {}
+    </script>
+
     <div id="background"></div>
     <div id="root" style="height: 100%"></div>
     <script type="module" src="/src/main.tsx"></script>

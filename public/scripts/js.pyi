@@ -86,6 +86,9 @@ class window:
     @staticmethod
     def matchMedia(media: str) -> Matches:
         pass
+    @staticmethod
+    def addEventListener(listener: JsCallable) -> int:
+        pass
 
 class Audio:
     @staticmethod

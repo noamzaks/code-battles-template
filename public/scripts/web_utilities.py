@@ -38,11 +38,8 @@ def download_images(sources: list[tuple[str, str]]) -> dict[str, Image]:
                 break
         if to_remove:
             remaining_images.remove(to_remove)
-        else:
-            print(str(image) + " not in remaining")
 
         remaining -= 1
-        print(remaining_images)
         if remaining == 0:
             result.set_result(images)
 
@@ -79,6 +76,16 @@ def show_alert(
 def set_results(player_names: list[str], places: list[int], map: str):
     if hasattr(window, "setResults"):
         window.setResults(player_names, places, map)
+
+
+def download_json(filename: str, contents: str):
+    if hasattr(window, "downloadJson"):
+        window.downloadJson(filename, contents)
+
+
+def console_log(player_index: int, text: str, color: str):
+    if hasattr(window, "consoleLog"):
+        window.consoleLog(player_index, text, color)
 
 
 def should_play():
@@ -136,7 +143,7 @@ class GameCanvas:
         self.fit_into(max_width, max_height)
 
     def fit_into(self, max_width: int, max_height: int):
-        while self.map_image.width == 0 or self.map_image.height == 0:
+        if self.map_image.width == 0 or self.map_image.height == 0:
             raise Exception("Map image invalid!")
         aspect_ratio = (
             self.map_image.width
@@ -245,11 +252,8 @@ class GameCanvas:
 
 async def load_font(name: str, url: str):
     ff = FontFace.new(name, f"url({url})")
-    print("Created", ff, name, url)
     await ff.load()
-    print("Loaded", ff, name, url)
     document.fonts.add(ff)
-    print("Added", ff, name, url)
 
 
 class Stub:

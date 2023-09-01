@@ -112,18 +112,42 @@ def start_simulate(
     player_names: list[str],
     map_image: Image,
     player_globals: list,
+    url_params: str,
     *args,
 ):
+    hide_logs = "log=false" in url_params
     player_count = len(players)
     canvas = document.getElementById("simulation")
     game_canvas = GameCanvas(
         canvas,
         player_count,
         map_image,
-        document.body.clientWidth - 40,
-        document.body.clientHeight - 260,
+        document.body.clientWidth - 40
+        if hide_logs
+        else document.body.clientWidth - 440,
+        document.body.clientHeight - 280,
         CONFIGURATION["extra_height"],
     )
+
+    def update_game_canvas(event):
+        game_canvas.fit_into(
+            document.body.clientWidth - 40
+            if hide_logs
+            else document.body.clientWidth - 440,
+            document.body.clientHeight - 280,
+        )
+        ui_render(
+            game_canvas,
+            player_count,
+            game,
+            player_names,
+            map_image,
+            player_globals,
+            *args,
+        )
+
+    window.addEventListener("resize", create_proxy(update_game_canvas))
+
     document.getElementById("loader").style.display = "none"
     ui_render(
         game_canvas,
@@ -252,7 +276,7 @@ async def simulate_background(
 
 
 async def initialize_simulation(
-    map: str, players: list[str], player_names: list[str], search: str
+    map: str, players: list[str], player_names: list[str], url_params: str
 ):
     game = create_initial_state(len(players), map)
     player_globals = get_player_apis(game, players)
@@ -263,7 +287,9 @@ async def initialize_simulation(
 
     args = await initial_setup(player_names)
 
-    start_simulate(players, game, player_names, map_image, player_globals, *args)
+    start_simulate(
+        players, game, player_names, map_image, player_globals, url_params, *args
+    )
 
 
 def run_noui_simulation(map: str, players: list[str], player_names: list[str]):
