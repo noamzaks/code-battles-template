@@ -7,7 +7,6 @@ const App = () => {
       configuration={{
         firebase: config,
         maps: ["NYC"],
-        players: {},
       }}
       routes={{}}
     />
