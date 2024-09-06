@@ -9,50 +9,21 @@
     />
     <meta name="theme-color" content="#0bb04f" />
     <title>Code Battles</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
-      rel="stylesheet"
-    />
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://pyscript.net/releases/2024.8.2/core.css"
     />
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script
+      type="module"
+      src="https://pyscript.net/releases/2024.8.2/core.js"
+    ></script>
   </head>
   <body style="height: 100vh; touch-action: none" class="line-numbers">
-    <script>
-      // This disables PyScript info logging
-      console.info = () => {}
-    </script>
-
     <div id="background"></div>
     <div id="root" style="height: 100%"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- prettier-ignore -->
-    <py-config type="toml" src="/pyscript.toml">
-    </py-config>
-    <py-script src="/scripts/ui.py"></py-script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
-      defer
-    ></script>
+    <script type="py" src="/scripts/ui.py" config="/pyscript.toml"></script>
   </body>
 </html>

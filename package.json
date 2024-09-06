@@ -8,26 +8,26 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "generate-docs": "cd public/scripts && pdoc api.py --no-show-source -t ../../pdoc-template -o .. && rm ../index.html ../search.js",
-    "deploy": "yarn generate-docs && yarn build && firebase deploy"
+    "deploy": "bun run generate-docs && bun run build && firebase deploy"
   },
   "dependencies": {
-    "@mantine/core": "^7.12.1",
-    "@mantine/dates": "^7.12.1",
-    "@mantine/hooks": "^7.12.1",
-    "@mantine/notifications": "^7.12.1",
-    "code-battles-components": "^1.0.3",
+    "@mantine/core": "^7.12.2",
+    "@mantine/dates": "^7.12.2",
+    "@mantine/hooks": "^7.12.2",
+    "@mantine/notifications": "^7.12.2",
+    "code-battles-components": "^1.0.6",
     "dayjs": "^1.11.13",
-    "firebase": "^10.13.0",
+    "firebase": "^10.13.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.4",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "typescript": "^5.5.4",
-    "vite": "^5.4.2"
+    "vite": "^5.4.3"
   },
   "prettier": {
     "semi": false

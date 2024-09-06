@@ -1,4 +1,5 @@
-import math  # Import for the players' APIs
+import asyncio
+import math
 import time
 import traceback
 
@@ -275,11 +276,12 @@ async def simulate_background(
     )
 
 
-async def initialize_simulation(
+async def initialize_simulation_async(
     map: str, players: list[str], player_names: list[str], url_params: str
 ):
     game = create_initial_state(len(players), map)
     player_globals = get_player_apis(game, players)
+
 
     map_image = await download_image(
         "/images/maps/" + map.lower().replace(" ", "_") + ".png"
@@ -289,6 +291,15 @@ async def initialize_simulation(
 
     start_simulate(
         players, game, player_names, map_image, player_globals, url_params, *args
+    )
+
+
+def initialize_simulation(
+    map: str, players: list[str], player_names: list[str], url_params: str
+):
+    loop = asyncio.get_event_loop()
+    return loop.run_until_complete(
+        initialize_simulation_async(map, players, player_names, url_params)
     )
 
 
@@ -311,3 +322,5 @@ def run_noui_simulation(map: str, players: list[str], player_names: list[str]):
         create_proxy(step),
         10,
     )
+
+window.runPython = create_proxy(lambda x: exec(x))
