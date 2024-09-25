@@ -1,8 +1,0 @@
-terminal = false
-
-[splashscreen]
-enabled = false
-
-[[fetch]]
-from = "/scripts/"
-files = ["api.py", "constants.py", "web_utilities.py", "game_state.py", "game_renderer.py", "game_simulator.py", "api_implementation.py", "game_config.py"]

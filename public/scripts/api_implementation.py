@@ -6,12 +6,12 @@ It has access to the game's state, and can change it accordingly.
 It also has access to its player's index.
 """
 
-from api import *
+from api import API
 from game_state import GameState
-from web_utilities import console_log
+from code_battles.utilities import console_log
 
 
-class GameContext(Context):
+class APIImplementation(API):
     _game: GameState
     _player_index: int
 

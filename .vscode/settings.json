@@ -1,5 +1,8 @@
 {
     "python.analysis.extraPaths": [
         "./public/scripts"
-    ]
+    ],
+    "files.exclude": {
+        "**/__pycache__": true,
+    }
 }

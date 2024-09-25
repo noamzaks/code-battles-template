@@ -7,23 +7,20 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=0.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
     />
-    <meta name="theme-color" content="#0bb04f" />
-    <title>Code Battles</title>
 
-    <link
-      rel="stylesheet"
-      href="https://pyscript.net/releases/2024.8.2/core.css"
-    />
-    <script
-      type="module"
-      src="https://pyscript.net/releases/2024.8.2/core.js"
-    ></script>
+    <!-- Site metadata -->
+    <title>Code Battles</title>
+    <meta name="theme-color" content="#0bb04f" />
+
+    <script type="module" src="/pyscript/core.js"></script>
+    <link rel="stylesheet" href="/pyscript/core.css" />
   </head>
+
   <body style="height: 100vh; touch-action: none" class="line-numbers">
     <div id="background"></div>
     <div id="root" style="height: 100%"></div>
-    <script type="module" src="/src/main.tsx"></script>
 
-    <script type="py" src="/scripts/ui.py" config="/pyscript.toml"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="py" src="/scripts/main.py" config="/config.json"></script>
   </body>
 </html>

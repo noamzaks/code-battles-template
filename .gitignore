@@ -3,3 +3,11 @@ node_modules
 .DS_Store
 dist
 src/firebase.json
+__pycache__
+
+# code battles library files
+public/scripts/code_battles
+public/pyscript
+# code battles generated files
+public/api.html
+public/config.json

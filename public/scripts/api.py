@@ -20,7 +20,7 @@ class Exceptions(Enum):
         return self == Exceptions.OK
 
 
-class Context:
+class API:
     """
     The main access point for your bot. Access this using `self.context` inside your `run` method.
 
@@ -73,9 +73,9 @@ class CodeBattlesBot:
     ```
     """
 
-    context: Context
+    context: API
 
-    def __init__(self, context: Context):
+    def __init__(self, context: API):
         self.context = context
         self.setup()
 

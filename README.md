@@ -4,12 +4,12 @@
 <h1 align="center">
   Code Battles
   <br />
-  <img src="https://img.shields.io/badge/version-1.0.0-purple.svg">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <img src="https://img.shields.io/npm/v/code-battles-components">
   <a href='https://code-battles.readthedocs.io/en/latest/?badge=latest'>
       <img src='https://readthedocs.org/projects/code-battles/badge/?version=latest' alt='Documentation Status' />
   </a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
 </h1>
 
 <p align="center">
@@ -20,7 +20,6 @@
     &nbsp;&middot&nbsp;
     🚗 <a href="#roadmap">Roadmap</a>
 </p>
-
 
 # Getting Started
 
