@@ -4,7 +4,7 @@ from code_battles import CodeBattles, run_game
 from game_state import GameState
 
 
-class BattleSnake(CodeBattles[GameState, APIImplementation, type(api)]):
+class MyCodeBattles(CodeBattles[GameState, APIImplementation, type(api)]):
     async def setup(self):
         pass
 
@@ -51,4 +51,4 @@ class BattleSnake(CodeBattles[GameState, APIImplementation, type(api)]):
 
 
 if __name__ == "__main__":
-    run_game(BattleSnake())
+    run_game(MyCodeBattles())
