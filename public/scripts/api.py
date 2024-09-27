@@ -29,29 +29,7 @@ class API:
 
     ### GENERAL METHODS ###
 
-    def log_info(self, text: str):
-        """
-        Prints the text to the console as an info message.
-        WARNING: Writing to log every time the run method might slow down the game.
-        """
-        raise NotImplementedError("Log")
-
-    def log_warning(self, text: str):
-        """
-        Prints the text to the console as a warning.
-        WARNING: Writing to log every time the run method might slow down the game.
-        """
-        raise NotImplementedError("Log")
-
-    def log_error(self, text: str):
-        """
-        Prints the text to the console as an error.
-        WARNING: Writing to log every time the run method might slow down the game.
-        """
-        raise NotImplementedError("Log")
-
-    def __init__(self) -> None:
-        pass
+    pass
 
 
 class CodeBattlesBot:

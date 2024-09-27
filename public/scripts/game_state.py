@@ -7,24 +7,12 @@ and variables corresponding to the position of every game object.
 """
 
 
-from constants import STEPS_PER_SECOND
-
-
 class PlayerState:
     pass
 
 
 class GameState:
     players: list[PlayerState]
-    steps: int
 
     def __init__(self, players: int):
         self.players = [PlayerState() for _ in range(players)]
-        self.steps = 0
-
-    @property
-    def time(self):
-        return self.steps / STEPS_PER_SECOND
-
-    def is_over(self):
-        return self.time > 100

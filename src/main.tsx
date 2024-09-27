@@ -2,7 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App"
 
-import { initialize } from "code-battles-components"
+import { initialize } from "code-battles"
 
 initialize()
 
