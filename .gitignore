@@ -12,4 +12,4 @@ public/pyscript
 # code battles generated files
 public/api.html
 public/config.json
-public/firebase.json
+public/firebase-configuration.json
